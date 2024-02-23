@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/build.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const jobTitles = ['an UI/UX Designer', 'a Digital Designer', 'a Photographer', 'a Web Developer', 'Backend Developer'];
+      let currentJobTitleIndex = 0;
+
+      const jobTitleElement = document.getElementById('jobTitle');
+      
+      setInterval(() => {
+        currentJobTitleIndex = (currentJobTitleIndex + 1) % jobTitles.length;
+        jobTitleElement.textContent = jobTitles[currentJobTitleIndex];
+      }, 5000);
+    });
+  </script>
+</head>
+<body>
+  <header class="flex flex-row items-center justify-between py-3 px-2" id="home">
+    <div class="flex flex-row items-center">
+      <a href="#home" title="hidesh">
+        <img src="./assets/hidesh-logo.svg" alt="hidesh logo" class="size-14">
+      </a>
+      <h1 class="pl-2 text-2xl">Hidesh's Portfolio</h1>
+    </div>
+    <div>
+      <ul class="flex flex-row space-x-4">
+        <li>
+          <a href="https://github.com/hidesh" target="_blank" rel="noopener">
+            <img src="./assets/github-logo.svg" alt="Github Logo" class="size-14">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/hidesh" target="_blank" rel="noopener">
+            <img src="./assets/linkedin-logo.svg" alt="Linkedin Logo" class="size-14">
+          </a>
+        </li>
+        <li>
+          <a href="mailto:hidesh@live.dk" target="_blank" rel="noopener">
+            <img src="./assets/mail-icon.svg" alt="Contact Mail" class="size-14">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="Hidesh" class="flex flex-row justify-evenly items-center min-h-screen">
+    <div class="flex flex-col justify-center">
+      <div class="flex flex-row text-6xl">
+        <h1>Hey there</h1>
+        <p class="animate-wave pl-2">👋</p>
+      </div>
+      <p class="text-4xl">My name is</p>
+      <p class="text-3xl font-bold">Hidesh Kumar</p>
+      <p id="jobTitle" class="pt-4 text-4xl animate-bounce w-[26rem]">I am a Frontend Developer.</p>
+    </div>
+
+    <img src="./assets/YupItsme-kopi.png" alt="Hidesh Kumar" />
+  </section>
+
+  <section id="about-me" class="bg-black text-white py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-yellow-500 mb-4">About Me</h2>
+      <p class="text-lg">
+        I'm a young and enthusiastic student, 23 years old, currently diving deep into the world of web development. 
+        I have a profound passion for what I do, always eager to learn more and apply my skills in practical scenarios. 
+        Besides my academic pursuits, I find joy in music, nurturing my creative side and providing a perfect escape from the daily grind. 
+        Additionally, I work at Power as a salesperson, where I enjoy interacting with different people and honing my interpersonal skills. 
+        My journey is a blend of technology, creativity, and communication, aiming to build meaningful and impactful digital experiences.
+      </p>
+    </div>
+  </section>
+  
+    
+  <section class="flex justify-center mb-20 pt-9" id="worked-with" >
+    <div>
+      <h1 class="text-center text-3xl font-bold">What I have worked with!</h1>
+      <div class="p-5 flex flex-col shadow-xl rounded-lg">
+        <!--Række 1-->
+          <div class="flex flex-row">
+            <img src="./assets/icons/html-icon.svg" alt="Html icon" class="px-5 size-28 hover:size-32">
+            <img src="./assets/icons/css-icon.svg" alt="Css icon" class="px-5 size-28 hover:size-32">
+            <img src="./assets/icons/javascript-icon.svg" alt="javascript icon" class="px-5 size-28 hover:size-32">
+          </div>
+        <!--Række 2-->
+          <div class="flex flex-row">
+            <img src="./assets/icons/tailwind-icon.svg" alt="tailwind icon" class="px-5 size-28 hover:size-32">
+            <img src="./assets/icons/bootstrap-icon.svg" alt="bootstrap icon" class="px-5 size-28 hover:size-32">
+            <img src="./assets/icons/mysql-icon.svg" alt="mysql icon" class="px-5 size-28 hover:size-32">
+          </div>
+
+        <!--Række 3-->
+          <div class="flex flex-row">
+            <img src="./assets/icons/react-icon.svg" alt="react icon" class="px-5 size-28 hover:size-32">
+            <img src="./assets/icons/nextjs-icon.svg" alt="nextjs icon" class="px-5 size-28 hover:size-32">
+            <img src="./assets/icons/angular-icon.svg" alt="angular icon" class="px-5 size-28 hover:size-32">
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-black text-white py-20" id="contact">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-yellow-500 mb-6">Contact Me</h2>
+      <form method="POST" class="space-y-8">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-400">Name</label>
+          <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500" placeholder="Your Name" required>
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-400">Email</label>
+          <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500" placeholder="Your Email" required>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-400">Message</label>
+          <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500" placeholder="Your Message" required></textarea>
+        </div>
+        <div class="flex justify-end">
+          <button type="submit" class="px-6 py-2 border border-transparent text-sm font-medium rounded-md text-black bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  
+  <footer class="bg-black text-white py-14">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-white">&copy; 2024 hidesh.com. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+
+  <nav class="fixed inset-x-0 bottom-0 bg-black">
+    <div class="flex justify-center space-x-4">
+        <a href="#home">
+          <button class="text-yellow-500 p-4"> 
+            Home
+          </button>
+        </a>
+      
+        <a href="#about-me">
+          <button class="text-yellow-500 p-4">
+            About me
+          </button>
+        </a>
+
+        <a href="#worked-with">
+          <button class="text-yellow-500 p-4">
+            Experience
+          </button>
+        </a>
+
+     
+        <a href="#contact">
+          <button class="text-yellow-500 p-4">
+          Contact
+          </button>
+        </a>
+    </div>
+  </nav>
+</body>
+</html>
